@@ -231,7 +231,7 @@ if (opcao == 1) {
         System.out.println("3. Campanha de castração");
         System.out.println("4. Aula de adestramento");
         
-       System.out.println("Digite qual deseja saber mais informações:");
+       System.out.println("Digite sobre qual evento deseja saber mais informações:");
         int opcaoEvento = entrada.nextInt();
         
         String local = "";
@@ -277,4 +277,6 @@ if (opcao == 1) {
 
     
 }}
+	
+
 	
