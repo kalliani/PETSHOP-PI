@@ -1,0 +1,112 @@
+import java.util.Scanner;
+
+public class MeuPrograma {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Digite o que você deseja fazer hoje.");
+        System.out.println("Caso queira marcar uma consulta, digite 1");
+        System.out.println("Caso queira tosar e/ou dar banho seu animal, digite 2");
+        System.out.println("Caso queira deixar seu animal na daycare, digite 3");
+        int registro_servico = entrada.nextInt();
+
+        String horario, data;
+
+        switch (registro_servico) {
+            case 1:
+                System.out.println("Você escolheu marcar uma consulta.");
+                System.out.println("Escolha o tipo de consulta:");
+                System.out.println("1. Consulta de rotina");
+                System.out.println("2. Consulta de emergência");
+                int tipo_consulta = entrada.nextInt();
+                if (tipo_consulta == 1) {
+                    System.out.println("Você escolheu consulta de rotina.");
+                    System.out.println("Diga o dia e o mês que deseja para a consulta de rotina (formato: dd/mm):");
+                    data = entrada.next();
+                    System.out.println("Diga qual o melhor horário (formato: hh:mm):");
+                    horario = entrada.next();
+                    System.out.println("Consulta de rotina marcada para " + data + " às " + horario);
+                } else if (tipo_consulta == 2) {
+                    System.out.println("Você escolheu consulta de emergência.");
+                    System.out.println("Diga o dia e o mês que deseja para a consulta de emergência (formato: dd/mm):");
+                    data = entrada.next();
+                    System.out.println("Diga qual o melhor horário (formato: hh:mm):");
+                    horario = entrada.next();
+                    System.out.println("Consulta de emergência marcada para " + data + " às " + horario);
+                } else {
+                    System.out.println("Opção inválida!");
+                }
+                break;
+            case 2:
+                System.out.println("Você escolheu tosar e/ou dar banho no seu animal.");
+                System.out.println("Escolha o tipo de serviço:");
+                System.out.println("1. Banho");
+                System.out.println("2. Banho e Tosa");
+                System.out.println("3. Banho e Hidratação");
+                System.out.println("4. Banho e Tosa Higiênica");
+                System.out.println("5. Banho e Tosa Máquina");
+                System.out.println("6. Banho e Tosa Tesoura");
+                int tipo_servico = entrada.nextInt();
+                System.out.println("Você escolheu:");
+                if (tipo_servico >= 1 && tipo_servico <= 6) {
+                    if (tipo_servico == 1) {
+                        System.out.println("- Banho");
+                    } else if (tipo_servico == 2) {
+                        System.out.println("- Banho e Tosa");
+                    } else if (tipo_servico == 3) {
+                        System.out.println("- Banho e Hidratação");
+                    } else if (tipo_servico == 4) {
+                        System.out.println("- Banho e Tosa Higiênica");
+                    } else if (tipo_servico == 5) {
+                        System.out.println("- Banho e Tosa Máquina");
+                    } else if (tipo_servico == 6) {
+                        System.out.println("- Banho e Tosa Tesoura");
+                    }
+                    System.out.println("Diga o dia e o mês que deseja para o serviço (formato: dd/mm):");
+                    data = entrada.next();
+                    System.out.println("Diga qual o melhor horário (formato: hh:mm):");
+                    horario = entrada.next();
+                    System.out.println("Serviço marcado para " + data + " às " + horario);
+                } else {
+                    System.out.println("Opção inválida!");
+                }
+                break;
+            case 3:
+                System.out.println("Você escolheu deixar seu animal na daycare.");
+            System.out.println("Digite a data de hospedagem do seu pet (formato dd/mm):");
+        String dataHospedagem = entrada.nextLine();
+
+        System.out.println("Escolha a localidade para a hospedagem do seu pet:");
+        System.out.println("1. Centro Pet");
+        System.out.println("2. Pet Paradise");
+        System.out.println("3. Happy Pet House");
+
+        int escolha = entrada.nextInt();
+        
+        String localidade;
+        
+        switch (escolha) {
+            case 1:
+                localidade = "Centro Pet";
+                break;
+            case 2:
+                localidade = "Pet Paradise";
+                break;
+            case 3:
+                localidade = "Happy Pet House";
+                break;
+            default:
+                localidade = "Localidade inválida";
+                break;
+        }
+        
+        System.out.println("Você escolheu " + localidade + " para a hospedagem do seu pet na data " + dataHospedagem + ".");
+
+                break;
+            default:
+                System.out.println("Opção inválida!");
+                break;
+        }
+    }
+}
