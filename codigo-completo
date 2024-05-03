@@ -43,7 +43,7 @@ if (opcao == 1) {
 
         System.out.println("");
         System.out.println("Adicione neste campo informações extras sobre restroções/alergias do seu pet");
-		anotacoes_pet = entrada.nextLine();
+		anotacoes_pet = entrada.next();
 
         System.out.println("");
         System.out.println("Prontinho, aqui estão as informações que foram registradas sobre seu animalzinho");
@@ -81,7 +81,7 @@ if (opcao == 1) {
 
         System.out.println("");
         System.out.println("Digite o seu email");
-		email_cliente = entrada.nextLine();
+		email_cliente = entrada.next();
 
         System.out.println("");
         System.out.println("Por favor, verifique seu dados:");
@@ -217,6 +217,7 @@ if (opcao == 1) {
         System.out.println("Você escolheu adotar o pet " + nomePet + ".");
         System.out.println("O pet se encontra no endereço: " + enderecoPetshop);
         System.out.println("Entraremos em contato em breve para discutir os detalhes da adoção.");
+    
 
         entrada.close();
     }
