@@ -18,12 +18,11 @@ public class CadastroPet {
 		var portePet = LerDados.lerTexto();
 		System.out.print("Digite o peso de seu pet: ");
 		var pesoPet = LerDados.lerDouble("Por favor, digite somente o peso de seu pet. ");
-		System.out.println("Adicione neste campo informações extras sobre restrições/alergias do seu pet");
+		System.out.println("Adicione neste campo informações extras sobre restroções/alergias do seu pet.");
 		var anotacoesPet = LerDados.lerTexto();
 
 		System.out.println();
 		System.out.println("Perfeito! Seu pet foi registrado com sucesso.");
-		System.out.println("Mais alguma necessidade?");
 		System.out.println();
 
 		listPet.add(new HistoricoPet(nomePet, idadePet, portePet, pesoPet, anotacoesPet));
