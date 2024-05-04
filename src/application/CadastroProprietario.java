@@ -13,10 +13,11 @@ public class CadastroProprietario {
 		System.out.print("Digite o seu nome completo: ");
 		var nomeProprietario = LerDados.lerTexto();
 		System.out.print("Digite seu cpf: ");
-		var cpf = LerDados.lerInt("Parece que você digitou errado, digite seu cpf novamente.");
+		Long cpf = LerDados.scan.nextLong();
 		System.out.print("Digite seu telefone: ");
-		var telefone = LerDados.lerInt("Parece que você digitou errado, digite seu telefone novamente");
+		Long telefone = LerDados.scan.nextLong();
 		System.out.print("Digite seu e-mail: ");
+		LerDados.scan.nextLine();
 		var email = LerDados.lerTexto();
 
 		System.out.println();
