@@ -54,23 +54,27 @@ public class HistoricoServicos {
 	}
 
 	public static void imprimirListaPet(List<HistoricoPet> listPet) {
-		if (listPet != null) {
+		if (listPet != null && !listPet.isEmpty()) {
 			System.out.println("Últimos registro de pet:");
 			for (HistoricoPet histoPet : listPet) {
+				System.out.println();
 				System.out.println(histoPet);
 			}
 		} else {
+			System.out.println();
 			System.out.println("A lista de histórico de pets está vazia.");
 		}
 	}
 
 	public static void imprimirListaProp(List<HistoricoProprietario> listProp) {
-		if (listProp != null) {
+		if (listProp != null && !listProp.isEmpty()) {
 			System.out.println("Últimos registro de proprietario:");
 			for (HistoricoProprietario histoProp : listProp) {
+				System.out.println();
 				System.out.println(histoProp);
 			}
 		} else {
+			System.out.println();
 			System.out.println("A lista de histórico de proprietários está vazia.");
 		}
 	}
@@ -102,90 +106,104 @@ public class HistoricoServicos {
 
 	public static void imprimirListaConsulta(List<ConsultaRotina> consultaRotina,
 			List<ConsultaEmergencia> consultaEmergencia) {
-		if (consultaRotina != null) {
+		if (consultaRotina != null && !consultaRotina.isEmpty()) {
 			System.out.println("Últimas consultas de rotina marcadas:");
 			for (ConsultaRotina histoConsultaRo : consultaRotina) {
 				System.out.println();
 				System.out.println(histoConsultaRo);
 			}
 		} else {
+			System.out.println();
 			System.out.println("A lista de consultas de rotina está vazia.");
 		}
-		if (consultaEmergencia != null) {
+		if (consultaEmergencia != null && !consultaEmergencia.isEmpty()) {
 			System.out.println("Últimas consultas de emergencia marcadas:");
 			for (ConsultaEmergencia histoConsultaEmer : consultaEmergencia) {
 				System.out.println();
 				System.out.println(histoConsultaEmer);
 			}
 		} else {
+			System.out.println();
 			System.out.println("A lista de consultas de emergência está vazia.");
 		}
 	}
 
-	public static void imprimirListaBanhoTosa(List<Banho> banho, List<BanhoTosa> banhoTosa,
-			List<BanhoHidratacao> banhoHidratacao, List<BanhoTosaHigienica> banhoTosaHigienica) {
-		if (banho != null) {
+	public static void imprimirListaBanhoTosa(List<Banho> banho, 
+			                                  List<BanhoTosa> banhoTosa,
+			                                  List<BanhoHidratacao> banhoHidratacao, 
+			                                  List<BanhoTosaHigienica> banhoTosaHigienica) {
+		if (banho != null && !banho.isEmpty()) {
 			for (Banho banhos : banho) {
 				System.out.println();
 				System.out.println(banhos);
 			}
 		} else {
+			System.out.println();
 			System.out.println("A lista de banhos marcados está vazia.");
 		}
-		if (banhoTosa != null) {
+		if (banhoTosa != null && !banhoTosa.isEmpty()) {
 			for (BanhoTosa banhotosa : banhoTosa) {
 				System.out.println();
 				System.out.println(banhotosa);
 			}
 		} else {
+			System.out.println();
 			System.out.println("A lista de banho e tosas marcados está vazia.");
 		}
-		if (banhoHidratacao != null) {
+		if (banhoHidratacao != null && !banhoHidratacao.isEmpty()) {
 			for (BanhoHidratacao banhohidratacao : banhoHidratacao) {
 				System.out.println();
 				System.out.println(banhohidratacao);
 			}
 		} else {
+			System.out.println();
 			System.out.println("A lista de banho e hidratações marcados está vazia.");
 		}
-		if (banhoTosaHigienica != null) {
+		if (banhoTosaHigienica != null && !banhoTosaHigienica.isEmpty()) {
 			for (BanhoTosaHigienica banhotosahigienica : banhoTosaHigienica) {
 				System.out.println();
 				System.out.println(banhotosahigienica);
 			}
 		} else {
+			System.out.println();
 			System.out.println("A lista de banho e tosa higiênica está vazia.");
 		}
 	}
 
 	public static void imprimirListaDaycare(List<Daycare> daycare) {
-		if (daycare != null) {
+		if (daycare != null && !daycare.isEmpty()) {
 			System.out.println("Últimos registros de daycare:");
 			for (Daycare dayCare : daycare) {
+				System.out.println();
 				System.out.println(dayCare);
 			}
 		} else {
+			System.out.println();
 			System.out.println("A lista de historico da daycare está vazia.");
 		}
 	}
 
 	public static void imprimirListaVendas(List<Vendas> vendas) {
-		if (vendas != null) {
+		if (vendas != null && !vendas.isEmpty()) {
 			for (Vendas histovendas : vendas) {
+				System.out.println();
 				System.out.println(histovendas);
 			}
 		} else {
+			System.out.println();
 			System.out.println("A lista de historico de vendas está vazia.");
 		}
 	}
 
 	public static void imprimirListaPets(List<Pets> pet) {
-		if (pet != null) {
+		if (pet != null && !pet.isEmpty()) {
 			System.out.println("Pets adotados:");
 			for (Pets pets : pet) {
+				System.out.println();
 				System.out.println(pets);
 			}
 		} else {
+			System.out.println();
 			System.out.println("A lista de pets adotados está vazia.");
 		}
 	}
