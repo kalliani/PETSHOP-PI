@@ -13,10 +13,10 @@ public class EventosPetshop {
 			System.out.println("Você já tem cadastro em nosso Petshop? (s/n) ");
 			Boolean cadastro = LerDados.lerSimNao("Essa não é uma opção válida, tente novamente!\n");
 			if (cadastro.equals(true)) {
-				eventosPetshop();
+				eventosDisponiveis();
 			} else if (cadastro.equals(false)) {
 				CadastroProprietario.cadastroProprietario();
-				eventosPetshop();
+				eventosDisponiveis();
 			} else {
 				System.out.println("Essa não é uma opção válida, tente novamente!");
 			}
@@ -63,12 +63,11 @@ public class EventosPetshop {
 				return;
 			} else {
 				System.out.println("Essa não é uma opção valida, tente novamente!");
+				eventosDisponiveis();
 			}
 			System.out.println();
-			System.out.println("O evento que você escolheu é o(a) " + evento + " que acontecerá no " + local
-					+ " no dia " + data.format(Data) + " às " + horario);
+			System.out.println("O evento que você escolheu é o(a) " + evento + " que acontecerá no " + local + " no dia " + data.format(Data) + " às " + horario);
 			System.out.println("Esperamos você lá");
-			System.out.println();
 		}
 	}
 }

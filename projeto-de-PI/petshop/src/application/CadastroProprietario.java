@@ -14,12 +14,10 @@ public class CadastroProprietario {
 		System.out.print("Digite seu telefone: ");
 		var telefone = LerDados.lerBigDecimal(9, "Por favor, digite apenas o seu numero de telefone nesse campo.\n");
 		System.out.print("Digite seu e-mail: ");
-		LerDados.scan.nextLine();
 		var email = LerDados.lerTexto();
 
 		System.out.println();
 		System.out.println("Perfeito! Você foi registrado em nosso sistema.");
-		System.out.println();
 
 		HistoricoProprietario.adicionarProprietario(new Proprietario(nomeProprietario, cpf, telefone, email));
 	}

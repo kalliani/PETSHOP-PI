@@ -20,7 +20,6 @@ public class CadastroPet {
 
 		System.out.println();
 		System.out.println("Perfeito! Seu pet foi registrado com sucesso.");
-		System.out.println();
 
 		HistoricoPet.adicionarPet(new Pet(nomePet, idadePet, portePet, pesoPet, anotacoesPet));
 	}

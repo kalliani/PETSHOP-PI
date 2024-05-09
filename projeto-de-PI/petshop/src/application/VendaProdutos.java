@@ -100,6 +100,7 @@ public class VendaProdutos {
 				Petshop.main(null);
 			} else {
 				System.out.println("Essa não é uma opção válida, tente novamente!");
+				vendaProdutos();
 			}
 		}
 	}
@@ -114,6 +115,5 @@ public class VendaProdutos {
 		
 		System.out.println();
 		System.out.println("Perfeito! Seu pedido chega em breve.");
-		System.out.println();
 	}
 }

@@ -50,7 +50,8 @@ public class HistoricoServicos {
 			} else if (escolha.equals(0)) {
 				return;
 			} else {
-				System.out.println("Essa não é uma opção válida.");
+				System.out.println("Essa não é uma opção válida, tente novamente.");
+				historicoServicos();
 			}
 		}
 	}
@@ -101,7 +102,8 @@ public class HistoricoServicos {
 			} else if (escolha2.equals(0)) {
 				return;
 			} else {
-				System.out.println("Essa não é uma opção válida.");
+				System.out.println("Essa não é uma opção válida, tente novamente.");
+				menuHistoricoServicos();
 			}
 		}
 	}
@@ -114,7 +116,6 @@ public class HistoricoServicos {
 				System.out.println(histoConsultaRo);
 			}
 		} else {
-			System.out.println();
 			System.out.println("A lista de consultas de rotina está vazia.");
 		}
 		if (consultaEmergencia != null && !consultaEmergencia.isEmpty()) {
@@ -124,7 +125,6 @@ public class HistoricoServicos {
 				System.out.println(histoConsultaEmer);
 			}
 		} else {
-			System.out.println();
 			System.out.println("A lista de consultas de emergência está vazia.");
 		}
 	}

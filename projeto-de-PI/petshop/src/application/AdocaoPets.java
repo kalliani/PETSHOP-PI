@@ -63,13 +63,13 @@ public class AdocaoPets {
 			return;
 		} else {
 			System.out.println("Essa não é uma opção válida, tente novamente.");
+			petsDisponiveis();
 		}
 		System.out.println();
 		System.out.println("Obrigado por preencher o formulário!");
 		System.out.println("Você escolheu adotar o pet " + nomePet + ".");
 		System.out.println("O pet se encontra no endereço: " + enderecoPetshop);
 		System.out.println("Entraremos em contato em breve para discutir os detalhes da adoção.");
-		System.out.println();
-		Petshop.main(null);
+		Petshop.menuPrincipal();
 	}
 }

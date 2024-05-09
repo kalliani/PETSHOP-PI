@@ -36,6 +36,7 @@ public class AgendamentoServicos {
 				return;
 			} else {
 				System.out.println("Parece que você digitou errado, tente novamente!");
+				agendamentoServicos();
 			}
 		}
 	}
@@ -70,6 +71,7 @@ public class AgendamentoServicos {
 			return;
 		} else {
 			System.out.println("Parece que você digitou errado, tente novamente!");
+			consultaVeterinario();
 		}
 	}
 
@@ -113,6 +115,7 @@ public class AgendamentoServicos {
 				return;
 			} else {
 				System.out.println("Essa não é uma opção, tente novamente!");
+				banhoTosa();
 			}
 		}
 	}
@@ -132,6 +135,5 @@ public class AgendamentoServicos {
 		
 		System.out.println();
 		System.out.println("Perfeito! Nos vemos em breve!");
-		System.out.println();
 	}
 }
