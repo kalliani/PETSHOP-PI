@@ -6,13 +6,15 @@ public class Pet {
 	private String portePet;
 	private Double pesoPet;
 	private String anotacoesPet;
+	private String nomeDoDono;
 	
-	public Pet(String nomePet, int idadePet, String portePet, Double pesoPet, String anotacoesPet) {
+	public Pet(String nomePet, int idadePet, String portePet, Double pesoPet, String anotacoesPet, String nomeDoDono) {
 		this.nomePet = nomePet;
 		this.idadePet = idadePet;
 		this.portePet = portePet;
 		this.pesoPet = pesoPet;
 		this.anotacoesPet = anotacoesPet;
+		this.nomeDoDono = nomeDoDono;
 	}
 
 	public String getNomePet() {
@@ -55,6 +57,14 @@ public class Pet {
 		this.anotacoesPet = anotacoesPet;
 	}
 	
+	public String getNomeDoDono() {
+		return nomeDoDono;
+	}
+
+	public void setNomeDoDono(String nomeDoDono) {
+		this.nomeDoDono = nomeDoDono;
+	}
+
 	public String toString() {
 		return "Nome: "
 				+ nomePet
@@ -66,6 +76,8 @@ public class Pet {
 				+ "\nPeso: "
 				+ pesoPet
 				+ "Kg "
+				+ "\nNome do proprietario: "
+				+ nomeDoDono
 				+ "\nObservações: "
 				+ anotacoesPet;
 	}

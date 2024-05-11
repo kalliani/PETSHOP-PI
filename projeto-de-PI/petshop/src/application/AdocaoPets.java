@@ -29,6 +29,7 @@ public class AdocaoPets {
 		for (Integer key : pet.keySet()) {
 			System.out.println(key + ". " + pet.get(key));
 		}
+		System.out.println("Aperte 0 caso queira voltar.");
 		System.out.println("Qual animalzinho você planeja adotar?");
 		System.out.print("Digite aqui: ");
 		Integer key = LerDados.lerInt("Essa não é uma opção válida, tente novamente!\n");
