@@ -35,9 +35,9 @@ public class Proprietario {
 		return "Nome do proprietario: "
 				+ nomeProprietario
 				+ "\nCPF: "
-				+ cpf
+				+ String.format("%.0f", cpf)
 				+ "\nNumero de telefone: "
-				+ telefone
+				+ String.format("%.0f", telefone)
 				+ "\nEmail: "
 				+ email;
 	}
