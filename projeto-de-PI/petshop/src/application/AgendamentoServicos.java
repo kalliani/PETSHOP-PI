@@ -16,6 +16,7 @@ import resources.LerDados;
 
 public class AgendamentoServicos {
 	public static void agendamentoServicos() {
+		System.out.println();
 		System.out.println("Qual serviço você esta buscando?");
 		while (true) {
 			System.out.println();
@@ -52,21 +53,21 @@ public class AgendamentoServicos {
 		Integer escolha = LerDados.lerInt("Opção inválida! Tente novamente.\n");
 
 		if (escolha.equals(1)) {
+			System.out.println();
 			System.out.println("Você escolheu consulta de rotina.");
 			System.out.print("Diga o dia, mês e horario que deseja para a consulta de rotina (dd/mm/aaaa HH:mm): ");
 			HistoricoConsulta.adicionarConsultaRotina(new ConsultaRotina(LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n")));
 
 			System.out.println();
 			System.out.println("Perfeito! Consulta de rotina marcada. Nos vemos em breve.");
-			System.out.println();
 		} else if (escolha.equals(2)) {
+			System.out.println();
 			System.out.println("Você escolheu consulta de rotina.");
 			System.out.print("Diga o dia, mês e horario que deseja para a consulta de emergência (dd/mm/aaaa HH:mm): ");
 			HistoricoConsulta.adicionarConsultaEmergencia(new ConsultaEmergencia(LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n")));
 
 			System.out.println();
 			System.out.println("Perfeito! Consulta de emergencia marcada. Nos vemos em breve.");
-			System.out.println();
 		} else if (escolha.equals(0)) {
 			return;
 		} else {
@@ -88,29 +89,33 @@ public class AgendamentoServicos {
 			Integer escolha = LerDados.lerInt("Opção inválida! Tente novamente.\n");
 
 			if (escolha.equals(1)) {
+				System.out.println();
 				System.out.print("Me informe o dia e o horario para o banho (dd/mm/aaaa HH:mm): ");
 				HistoricoBanhoTosa.adicionarBanho(new Banho(LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n")));
 
-				System.out.println("Perfeito! Banho marcado.");
 				System.out.println();
+				System.out.println("Perfeito! Banho marcado.");
 			} else if (escolha.equals(2)) {
+				System.out.println();
 				System.out.print("Me informe o dia e o horario para o banho e tosa (dd/mm/aaaa HH:mm): ");
 				HistoricoBanhoTosa.adicionarBanhoTosa(new BanhoTosa(LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n")));
 
-				System.out.println("Perfeito! Tosa marcada.");
 				System.out.println();
+				System.out.println("Perfeito! Tosa marcada.");
 			} else if (escolha.equals(3)) {
+				System.out.println();
 				System.out.print("Me informe o dia e o horario para o banho e a hidratação (dd/mm/aaaa HH:mm): ");
 				HistoricoBanhoTosa.adicionarBanhoHidratacao(new BanhoHidratacao(LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n")));
 				
-				System.out.println("Perfeito! Banho e tosa marcado.");
 				System.out.println();
+				System.out.println("Perfeito! Banho e tosa marcado.");
 			} else if (escolha.equals(4)) {
+				System.out.println();
 				System.out.print("Me informe o dia e o horario para o banho e tosa higiênica (dd/mm/aaaa HH:mm): ");
 				HistoricoBanhoTosa.adicionarBanhoTosaHigienica(new BanhoTosaHigienica(LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n")));
 				
-				System.out.println("Perfeito! Banho e tosa higiênica marcada.");
 				System.out.println();
+				System.out.println("Perfeito! Banho e tosa higiênica marcada.");
 			} else if (escolha.equals(0)) {
 				return;
 			} else {

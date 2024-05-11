@@ -28,6 +28,7 @@ public class CadastroPet {
 	}
 	
 	public static void adicionarPetParaAdocao() {
+		System.out.println();
 		System.out.print("Digite o nome do animal: ");
 		var nomePet = LerDados.lerTexto();
 		System.out.print("Digite que tipo de animal ele é: ");
@@ -46,6 +47,7 @@ public class CadastroPet {
 			System.out.println("Perfeito! Pet adicionado à lista de adoção.");
 		} else {
 			HistoricoAdocaoPets.adicionarPets(chave, new Pets(nomePet, tipoAnimal, genero, idade, raca));
+			System.out.println();
 			System.out.println("Perfeito! Pet adicionado à lista de adoção.");
 		}
 	}
@@ -60,7 +62,7 @@ public class CadastroPet {
 		var portePet = LerDados.lerTexto();
 		System.out.print("Digite o peso de seu pet: ");
 		var pesoPet = LerDados.lerDouble("Por favor, digite somente o peso de seu pet. ");
-		System.out.println("Nome do responsavel do animal: ");
+		System.out.print("Nome do responsavel do animal: ");
 		var proprietario = LerDados.lerTexto();
 		System.out.println("Adicione neste campo informações extras sobre restrições/alergias do seu pet.");
 		var anotacoesPet = LerDados.lerTexto();

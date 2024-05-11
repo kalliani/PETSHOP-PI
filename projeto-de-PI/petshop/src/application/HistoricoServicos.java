@@ -58,6 +58,7 @@ public class HistoricoServicos {
 	}
 
 	public static void imprimirListaPet(List<Pet> pet) {
+		System.out.println();
 		if (pet != null && !pet.isEmpty()) {
 			System.out.println("Últimos registro de pet:");
 			for (Pet histoPet : pet) {
@@ -71,6 +72,7 @@ public class HistoricoServicos {
 	}
 
 	public static void imprimirListaProp(List<Proprietario> proprietario) {
+		System.out.println();
 		if (proprietario != null && !proprietario.isEmpty()) {
 			System.out.println("Últimos registro de proprietario:");
 			for (Proprietario histoProp : proprietario) {
@@ -109,8 +111,8 @@ public class HistoricoServicos {
 		}
 	}
 
-	public static void imprimirListaConsulta(List<ConsultaRotina> consultaRotina,
-			List<ConsultaEmergencia> consultaEmergencia) {
+	public static void imprimirListaConsulta(List<ConsultaRotina> consultaRotina, List<ConsultaEmergencia> consultaEmergencia) {
+		System.out.println();
 		if (consultaRotina != null && !consultaRotina.isEmpty()) {
 			System.out.println("Últimas consultas de rotina marcadas:");
 			for (ConsultaRotina histoConsultaRo : consultaRotina) {
@@ -120,9 +122,9 @@ public class HistoricoServicos {
 			System.out.println("A lista de consultas de rotina está vazia.");
 		}
 		if (consultaEmergencia != null && !consultaEmergencia.isEmpty()) {
+			System.out.println();
 			System.out.println("Últimas consultas de emergencia marcadas:");
 			for (ConsultaEmergencia histoConsultaEmer : consultaEmergencia) {
-				System.out.println();
 				System.out.println(histoConsultaEmer);
 			}
 		} else {
@@ -130,10 +132,8 @@ public class HistoricoServicos {
 		}
 	}
 
-	public static void imprimirListaBanhoTosa(List<Banho> banho, 
-			                                  List<BanhoTosa> banhoTosa,
-			                                  List<BanhoHidratacao> banhoHidratacao, 
-			                                  List<BanhoTosaHigienica> banhoTosaHigienica) {
+	public static void imprimirListaBanhoTosa(List<Banho> banho, List<BanhoTosa> banhoTosa, List<BanhoHidratacao> banhoHidratacao, List<BanhoTosaHigienica> banhoTosaHigienica) {
+		System.out.println();
 		if (banho != null && !banho.isEmpty()) {
 			for (Banho banhos : banho) {
 				System.out.println();
@@ -144,6 +144,7 @@ public class HistoricoServicos {
 			System.out.println("A lista de banhos marcados está vazia.");
 		}
 		if (banhoTosa != null && !banhoTosa.isEmpty()) {
+			System.out.println();
 			for (BanhoTosa banhotosa : banhoTosa) {
 				System.out.println();
 				System.out.println(banhotosa);
@@ -153,6 +154,7 @@ public class HistoricoServicos {
 			System.out.println("A lista de banho e tosas marcados está vazia.");
 		}
 		if (banhoHidratacao != null && !banhoHidratacao.isEmpty()) {
+			System.out.println();
 			for (BanhoHidratacao banhohidratacao : banhoHidratacao) {
 				System.out.println();
 				System.out.println(banhohidratacao);
@@ -162,6 +164,7 @@ public class HistoricoServicos {
 			System.out.println("A lista de banho e hidratações marcados está vazia.");
 		}
 		if (banhoTosaHigienica != null && !banhoTosaHigienica.isEmpty()) {
+			System.out.println();
 			for (BanhoTosaHigienica banhotosahigienica : banhoTosaHigienica) {
 				System.out.println();
 				System.out.println(banhotosahigienica);
@@ -173,6 +176,7 @@ public class HistoricoServicos {
 	}
 
 	public static void imprimirListaDaycare(List<Daycare> daycare) {
+		System.out.println();
 		if (daycare != null && !daycare.isEmpty()) {
 			System.out.println("Últimos registros de daycare:");
 			for (Daycare dayCare : daycare) {
@@ -186,6 +190,7 @@ public class HistoricoServicos {
 	}
 
 	public static void imprimirListaVendas(List<Vendas> vendas) {
+		System.out.println();
 		if (vendas != null && !vendas.isEmpty()) {
 			for (Vendas histovendas : vendas) {
 				System.out.println();
@@ -198,6 +203,7 @@ public class HistoricoServicos {
 	}
 
 	public static void imprimirListaPets(Map<Integer, PetsAdotados> petsAdotados) {
+		System.out.println();
 		if (petsAdotados != null && !petsAdotados.isEmpty()) {
 			System.out.println("Pets adotados:");
 			for (Integer key : petsAdotados.keySet()) {
