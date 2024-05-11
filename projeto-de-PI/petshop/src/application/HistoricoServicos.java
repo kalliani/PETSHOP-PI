@@ -1,6 +1,7 @@
 package application;
 
 import java.util.List;
+import java.util.Map;
 
 import resources.Banho;
 import resources.BanhoHidratacao;
@@ -18,7 +19,7 @@ import resources.HistoricoProprietario;
 import resources.HistoricoVendas;
 import resources.LerDados;
 import resources.Pet;
-import resources.Pets;
+import resources.PetsAdotados;
 import resources.Proprietario;
 import resources.Vendas;
 
@@ -46,7 +47,7 @@ public class HistoricoServicos {
 			} else if (escolha.equals(4)) {
 				imprimirListaVendas(HistoricoVendas.vendas);
 			} else if (escolha.equals(5)) {
-				imprimirListaPets(HistoricoAdocaoPets.pet);
+				imprimirListaPets(HistoricoAdocaoPets.petsAdotados);
 			} else if (escolha.equals(0)) {
 				return;
 			} else {
@@ -196,12 +197,12 @@ public class HistoricoServicos {
 		}
 	}
 
-	public static void imprimirListaPets(List<Pets> pet) {
-		if (pet != null && !pet.isEmpty()) {
+	public static void imprimirListaPets(Map<Integer, PetsAdotados> petsAdotados) {
+		if (petsAdotados != null && !petsAdotados.isEmpty()) {
 			System.out.println("Pets adotados:");
-			for (Pets pets : pet) {
+			for (Integer key : petsAdotados.keySet()) {
 				System.out.println();
-				System.out.println(pets);
+				System.out.println(petsAdotados.get(key));
 			}
 		} else {
 			System.out.println();

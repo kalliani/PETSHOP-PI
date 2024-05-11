@@ -9,17 +9,15 @@ public class EventosPetshop {
 	public static final DateTimeFormatter Data = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
 	public static void eventosPetshop() {
-		while (true) {
-			System.out.println("Você já tem cadastro em nosso Petshop? (s/n) ");
-			Boolean cadastro = LerDados.lerSimNao("Essa não é uma opção válida, tente novamente!\n");
-			if (cadastro.equals(true)) {
-				eventosDisponiveis();
-			} else if (cadastro.equals(false)) {
-				CadastroProprietario.cadastroProprietario();
-				eventosDisponiveis();
-			} else {
-				System.out.println("Essa não é uma opção válida, tente novamente!");
-			}
+		System.out.println("Você já tem cadastro em nosso Petshop? (s/n) ");
+		Boolean cadastro = LerDados.lerSimNao("Essa não é uma opção válida, tente novamente!\n");
+		if (cadastro.equals(true)) {
+			eventosDisponiveis();
+		} else if (cadastro.equals(false)) {
+			CadastroProprietario.cadastroProprietario();
+			eventosDisponiveis();
+		} else {
+			System.out.println("Essa não é uma opção válida, tente novamente!");
 		}
 	}
 
@@ -66,7 +64,8 @@ public class EventosPetshop {
 				eventosDisponiveis();
 			}
 			System.out.println();
-			System.out.println("O evento que você escolheu é o(a) " + evento + " que acontecerá no " + local + " no dia " + data.format(Data) + " às " + horario);
+			System.out.println("O evento que você escolheu é o(a) " + evento + " que acontecerá no " + local
+					+ " no dia " + data.format(Data) + " às " + horario);
 			System.out.println("Esperamos você lá");
 		}
 	}

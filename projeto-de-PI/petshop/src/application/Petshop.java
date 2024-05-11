@@ -38,7 +38,9 @@ public class Petshop {
 				EventosPetshop.eventosPetshop();
 			} else if (escolha.equals(0)) {
 				return;
-			} 
+			}  else {
+				System.out.println("Opção invalida, tente novamente!");
+			}
 		}
 	}
 }
