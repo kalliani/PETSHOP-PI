@@ -66,7 +66,7 @@ public class Pets {
 	}
 
 	public String toString() {
-		if (raca == null) {
+		if (raca == null || raca.isEmpty()) {
 		return nome
 				+ " - "
 				+ animal

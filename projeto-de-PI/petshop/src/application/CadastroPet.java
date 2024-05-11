@@ -12,7 +12,7 @@ public class CadastroPet {
 		System.out.println("|1. Cadastrar meu pet.            |");
 		System.out.println("|2. Colocar um animal para adoção.|");
 		System.out.println("|0. Voltar.                       |");
-		System.out.println("Digite aqui: ");
+		System.out.print("Digite aqui: ");
 		Integer escolha = LerDados.lerInt("Parece que você escreveu errado, tente novamente!\n");
 		
 		if (escolha.equals(1)) {
@@ -38,7 +38,7 @@ public class CadastroPet {
 		var idade = LerDados.lerTexto();
 		System.out.print("Digite a raça do animal (se não souber, só aperte enter): ");
 		var raca = LerDados.lerTexto();
-		System.out.println("Digite a chave para esse pet (de 7 em diante): ");
+		System.out.print("Digite a chave para esse pet (de 7 em diante): ");
 		var chave = LerDados.lerInt("A chave deve ser um número maior que 7.\n");
 		if (raca == null) {
 			HistoricoAdocaoPets.adicionarPets(chave, new Pets(nomePet, tipoAnimal, genero, idade));

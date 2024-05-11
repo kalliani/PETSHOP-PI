@@ -23,7 +23,7 @@ public class Petshop {
 			Integer escolha = LerDados.lerInt("Parece que você digitou errado, tente novamente!\n");
 
 			if (escolha.equals(1)) {
-				CadastroPet.cadastroPet();
+				CadastroPet.cadastroOuAdocao();
 			} else if (escolha.equals(2)) {
 				CadastroProprietario.cadastroProprietario();
 			} else if (escolha.equals(3)) {
