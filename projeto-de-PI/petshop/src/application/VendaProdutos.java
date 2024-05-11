@@ -1,16 +1,17 @@
 package application;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import resources.HistoricoVendas;
 import resources.LerDados;
 import resources.Vendas;
 
 public class VendaProdutos {
-	public static SimpleDateFormat mascara = new SimpleDateFormat("dd/MM/aaaa HH:mm");
+	public static DateTimeFormatter mascara = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
+	public static LocalDateTime data = LocalDateTime.now();
 	public static double carrinho;
-	public static Date data = new Date();
+	
 	public static void vendaProdutos() {
 		carrinho = 0;
 		System.out.println("Bem-vindo à loja do PetShop!");
@@ -107,7 +108,8 @@ public class VendaProdutos {
 	}
 
 	private static void carrinhoCompras() {
-		String dia = mascara.format(data);
+		String dia = data.format(mascara);
+		
 		System.out.println();
 		System.out.println("O total foi de R$" + carrinho);
 		System.out.print("Escreva seu nome completo: ");
