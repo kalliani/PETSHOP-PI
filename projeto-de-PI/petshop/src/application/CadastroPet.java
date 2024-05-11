@@ -40,7 +40,7 @@ public class CadastroPet {
 		System.out.print("Digite a raça do animal (se não souber, só aperte enter): ");
 		var raca = LerDados.lerTexto();
 		System.out.print("Digite a chave para esse pet (de 7 em diante): ");
-		var chave = LerDados.lerInt("A chave deve ser um número maior que 7.\n");
+		var chave = LerDados.lerInt("A chave deve ser um número maior ou igual a 7.\n");
 		if (raca == null) {
 			HistoricoAdocaoPets.adicionarPets(chave, new Pets(nomePet, tipoAnimal, genero, idade));
 			System.out.println();

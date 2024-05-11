@@ -135,6 +135,7 @@ public class HistoricoServicos {
 	public static void imprimirListaBanhoTosa(List<Banho> banho, List<BanhoTosa> banhoTosa, List<BanhoHidratacao> banhoHidratacao, List<BanhoTosaHigienica> banhoTosaHigienica) {
 		System.out.println();
 		if (banho != null && !banho.isEmpty()) {
+			System.out.println("Ultimos banhos marcados:");
 			for (Banho banhos : banho) {
 				System.out.println();
 				System.out.println(banhos);
@@ -145,6 +146,7 @@ public class HistoricoServicos {
 		}
 		if (banhoTosa != null && !banhoTosa.isEmpty()) {
 			System.out.println();
+			System.out.println("Ultimos banho e tosas marcados:");
 			for (BanhoTosa banhotosa : banhoTosa) {
 				System.out.println();
 				System.out.println(banhotosa);
@@ -155,6 +157,7 @@ public class HistoricoServicos {
 		}
 		if (banhoHidratacao != null && !banhoHidratacao.isEmpty()) {
 			System.out.println();
+			System.out.println("Ultimos banhos e hidratação marcados:");
 			for (BanhoHidratacao banhohidratacao : banhoHidratacao) {
 				System.out.println();
 				System.out.println(banhohidratacao);
@@ -165,6 +168,7 @@ public class HistoricoServicos {
 		}
 		if (banhoTosaHigienica != null && !banhoTosaHigienica.isEmpty()) {
 			System.out.println();
+			System.out.println("Ultimos banhos e tosa higiênicas marcadas:");
 			for (BanhoTosaHigienica banhotosahigienica : banhoTosaHigienica) {
 				System.out.println();
 				System.out.println(banhotosahigienica);
@@ -192,6 +196,7 @@ public class HistoricoServicos {
 	public static void imprimirListaVendas(List<Vendas> vendas) {
 		System.out.println();
 		if (vendas != null && !vendas.isEmpty()) {
+			System.out.println("Historico de vendas feitas:");
 			for (Vendas histovendas : vendas) {
 				System.out.println();
 				System.out.println(histovendas);

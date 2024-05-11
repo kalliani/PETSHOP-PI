@@ -6,10 +6,14 @@ public class Daycare {
 	
 	private String localidade; 
 	private LocalDateTime dataDaycare;
+	private String animal;
+	private String donoDoAnimal;
 
-	public Daycare( LocalDateTime dataDaycare, String localidade) {
+	public Daycare(String localidade, LocalDateTime dataDaycare, String animal, String donoDoAnimal) {
 		this.localidade = localidade;
 		this.dataDaycare = dataDaycare;
+		this.animal = animal;
+		this.donoDoAnimal = donoDoAnimal;
 	}
 
 	public String getLocalidade() {
@@ -28,8 +32,28 @@ public class Daycare {
 		this.dataDaycare = dataDaycare;
 	}
 
+	public String getAnimal() {
+		return animal;
+	}
+
+	public void setAnimal(String animal) {
+		this.animal = animal;
+	}
+
+	public String getDonoDoAnimal() {
+		return donoDoAnimal;
+	}
+
+	public void setDonoDoAnimal(String donoDoAnimal) {
+		this.donoDoAnimal = donoDoAnimal;
+	}
+
 	public String toString() {
-		return "Data: " 
+		return "Animal: "
+				+ animal 
+				+ "\nProprietario do pet: "
+				+ donoDoAnimal
+				+ "\nData: " 
 				+ dataDaycare 
 				+ "\nLocal da hospedagem: " 
 				+ localidade;

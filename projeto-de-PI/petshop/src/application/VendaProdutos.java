@@ -1,15 +1,16 @@
 package application;
 
-import java.util.Scanner;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import resources.HistoricoVendas;
 import resources.LerDados;
 import resources.Vendas;
 
 public class VendaProdutos {
-	public static final Scanner sc = new Scanner(System.in);
+	public static SimpleDateFormat mascara = new SimpleDateFormat("dd/MM/aaaa HH:mm");
 	public static double carrinho;
-	
+	public static Date data = new Date();
 	public static void vendaProdutos() {
 		carrinho = 0;
 		System.out.println("Bem-vindo à loja do PetShop!");
@@ -106,12 +107,14 @@ public class VendaProdutos {
 	}
 
 	private static void carrinhoCompras() {
-		
+		String dia = mascara.format(data);
 		System.out.println();
 		System.out.println("O total foi de R$" + carrinho);
+		System.out.print("Escreva seu nome completo: ");
+		var nome = LerDados.lerTexto();
 		System.out.print("Digite seu endereço para que possamos entrar seu pedido: ");
 		var endereco = LerDados.lerTexto();
-		HistoricoVendas.adicionarHistoricoVendas(new Vendas(carrinho, endereco));
+		HistoricoVendas.adicionarHistoricoVendas(new Vendas(carrinho, endereco, nome, dia));
 		
 		System.out.println();
 		System.out.println("Perfeito! Seu pedido chega em breve.");

@@ -1,7 +1,5 @@
 package application;
 
-import java.time.LocalDateTime;
-
 import resources.Banho;
 import resources.BanhoHidratacao;
 import resources.BanhoTosa;
@@ -53,19 +51,31 @@ public class AgendamentoServicos {
 		Integer escolha = LerDados.lerInt("Opção inválida! Tente novamente.\n");
 
 		if (escolha.equals(1)) {
+			var doutor = "Hugo";
 			System.out.println();
 			System.out.println("Você escolheu consulta de rotina.");
 			System.out.print("Diga o dia, mês e horario que deseja para a consulta de rotina (dd/mm/aaaa HH:mm): ");
-			HistoricoConsulta.adicionarConsultaRotina(new ConsultaRotina(LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n")));
+			var dia = LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n");
+			System.out.print("Nome do pet que será atendido: ");
+			var nome = LerDados.lerTexto();
+			System.out.print("Nome do dono do pet: ");
+			var dono = LerDados.lerTexto();
+			HistoricoConsulta.adicionarConsultaRotina(new ConsultaRotina(dia, nome, dono, doutor));
 
 			System.out.println();
 			System.out.println("Perfeito! Consulta de rotina marcada. Nos vemos em breve.");
 		} else if (escolha.equals(2)) {
+			var doutor = "Otávio";
 			System.out.println();
-			System.out.println("Você escolheu consulta de rotina.");
+			System.out.println("Você escolheu consulta de emergência.");
 			System.out.print("Diga o dia, mês e horario que deseja para a consulta de emergência (dd/mm/aaaa HH:mm): ");
-			HistoricoConsulta.adicionarConsultaEmergencia(new ConsultaEmergencia(LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n")));
-
+			var dia = LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n");
+			System.out.print("Nome do pet que será atendido: ");
+			var nome = LerDados.lerTexto();
+			System.out.print("Nome do dono do pet: ");
+			var dono = LerDados.lerTexto();
+			HistoricoConsulta.adicionarConsultaEmergencia(new ConsultaEmergencia(dia, nome, dono, doutor));
+			
 			System.out.println();
 			System.out.println("Perfeito! Consulta de emergencia marcada. Nos vemos em breve.");
 		} else if (escolha.equals(0)) {
@@ -91,28 +101,48 @@ public class AgendamentoServicos {
 			if (escolha.equals(1)) {
 				System.out.println();
 				System.out.print("Me informe o dia e o horario para o banho (dd/mm/aaaa HH:mm): ");
-				HistoricoBanhoTosa.adicionarBanho(new Banho(LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n")));
+				var dia = LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n");
+				System.out.print("Nome do pet que tomará banho: ");
+				var animal = LerDados.lerTexto();
+				System.out.print("Nome do dono do pet: ");
+				var dono = LerDados.lerTexto();
+				HistoricoBanhoTosa.adicionarBanho(new Banho(dia, animal, dono));
 
 				System.out.println();
 				System.out.println("Perfeito! Banho marcado.");
 			} else if (escolha.equals(2)) {
 				System.out.println();
 				System.out.print("Me informe o dia e o horario para o banho e tosa (dd/mm/aaaa HH:mm): ");
-				HistoricoBanhoTosa.adicionarBanhoTosa(new BanhoTosa(LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n")));
+				var dia = LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n");
+				System.out.print("Nome do pet: ");
+				var animal = LerDados.lerTexto();
+				System.out.print("Nome do dono do pet: ");
+				var dono = LerDados.lerTexto();
+				HistoricoBanhoTosa.adicionarBanhoTosa(new BanhoTosa(dia, animal, dono));
 
 				System.out.println();
 				System.out.println("Perfeito! Tosa marcada.");
 			} else if (escolha.equals(3)) {
 				System.out.println();
 				System.out.print("Me informe o dia e o horario para o banho e a hidratação (dd/mm/aaaa HH:mm): ");
-				HistoricoBanhoTosa.adicionarBanhoHidratacao(new BanhoHidratacao(LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n")));
+				var dia = LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n");
+				System.out.print("Nome do pet: ");
+				var animal = LerDados.lerTexto();
+				System.out.print("Nome do dono do pet: ");
+				var dono = LerDados.lerTexto();
+				HistoricoBanhoTosa.adicionarBanhoHidratacao(new BanhoHidratacao(dia, animal, dono));
 				
 				System.out.println();
 				System.out.println("Perfeito! Banho e tosa marcado.");
 			} else if (escolha.equals(4)) {
 				System.out.println();
 				System.out.print("Me informe o dia e o horario para o banho e tosa higiênica (dd/mm/aaaa HH:mm): ");
-				HistoricoBanhoTosa.adicionarBanhoTosaHigienica(new BanhoTosaHigienica(LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n")));
+				var dia = LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n");
+				System.out.print("Nome do pet: ");
+				var animal = LerDados.lerTexto();
+				System.out.print("Nome do dono do pet: ");
+				var dono = LerDados.lerTexto();
+				HistoricoBanhoTosa.adicionarBanhoTosaHigienica(new BanhoTosaHigienica(dia, animal, dono));
 				
 				System.out.println();
 				System.out.println("Perfeito! Banho e tosa higiênica marcada.");
@@ -128,15 +158,20 @@ public class AgendamentoServicos {
 	private static void dayCare() {
 		System.out.println();
 		System.out.println("Você escolheu deixar seu animal na daycare.");
+		System.out.println();
+		System.out.print("Diga o nome do pet que ficará conosco: ");
+		var animal = LerDados.lerTexto();
+		System.out.print("Nome do dono do pet: ");
+		var dono = LerDados.lerTexto();
 		System.out.print("Digite a data de hospedagem do seu pet (dd/mm/aaaa HH:mm): ");
-		LocalDateTime dataDaycare = LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n");
+		var dataDaycare = LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n");
 		System.out.println("Escolha a localidade para a hospedagem do seu pet:");
 	    System.out.println("|Centro Pet.     |");
 	    System.out.println("|Pet Paradise.   |");
 	    System.out.println("|Happy Pet House.|");
 	    System.out.print("Digite aqui: ");
 	    String localidade = LerDados.lerTexto();
-	    HistoricoDaycare.adicionarDaycare(new Daycare(dataDaycare, localidade));
+	    HistoricoDaycare.adicionarDaycare(new Daycare(localidade, dataDaycare, animal, dono));
 		
 		System.out.println();
 		System.out.println("Perfeito! Nos vemos em breve!");
