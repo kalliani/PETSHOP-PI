@@ -2,19 +2,21 @@ package resources;
 
 public class Pet {
 	private String nomePet;
-	private int idadePet;
+	private Double idadePet;
 	private String portePet;
 	private Double pesoPet;
 	private String anotacoesPet;
 	private String nomeDoDono;
-	
-	public Pet(String nomePet, int idadePet, String portePet, Double pesoPet, String anotacoesPet, String nomeDoDono) {
+	private int numeroRegistro;
+
+	public Pet(String nomePet, Double idadePet, String portePet, Double pesoPet, String anotacoesPet, String nomeDoDono, int numeroRegistro) {
 		this.nomePet = nomePet;
 		this.idadePet = idadePet;
 		this.portePet = portePet;
 		this.pesoPet = pesoPet;
 		this.anotacoesPet = anotacoesPet;
 		this.nomeDoDono = nomeDoDono;
+		this.numeroRegistro = numeroRegistro;
 	}
 
 	public String getNomePet() {
@@ -25,11 +27,11 @@ public class Pet {
 		this.nomePet = nomePet;
 	}
 
-	public int getIdadePet() {
+	public Double getIdadePet() {
 		return idadePet;
 	}
 
-	public void setIdadePet(int idadePet) {
+	public void setIdadePet(Double idadePet) {
 		this.idadePet = idadePet;
 	}
 
@@ -65,11 +67,19 @@ public class Pet {
 		this.nomeDoDono = nomeDoDono;
 	}
 
+	public int getNumeroRegistro() {
+		return numeroRegistro;
+	}
+
+	public void setNumeroRegistro(int numeroRegistro) {
+		this.numeroRegistro = numeroRegistro;
+	}
+
 	public String toString() {
 		return "Nome: "
 				+ nomePet
 				+ "\nIdade: "
-				+ idadePet
+				+ String.format("%.0f", idadePet)
 				+ " anos "
 				+ "\nPorte: "
 				+ portePet
@@ -79,6 +89,8 @@ public class Pet {
 				+ "\nNome do proprietario: "
 				+ nomeDoDono
 				+ "\nObservações: "
-				+ anotacoesPet;
+				+ anotacoesPet
+				+ "\nNumero de registro: "
+				+ numeroRegistro;
 	}
 }
