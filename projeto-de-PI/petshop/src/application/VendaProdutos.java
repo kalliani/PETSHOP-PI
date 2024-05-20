@@ -8,7 +8,6 @@ import resources.LerDados;
 import resources.Vendas;
 
 public class VendaProdutos {
-	public static DateTimeFormatter mascara = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 	public static LocalDateTime data = LocalDateTime.now();
 	public static double carrinho;
 	
@@ -108,7 +107,7 @@ public class VendaProdutos {
 	}
 
 	private static void carrinhoCompras() {
-		String dia = data.format(mascara);
+		String dia = data.format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm"));
 		
 		System.out.println();
 		System.out.println("O total foi de R$" + carrinho);
