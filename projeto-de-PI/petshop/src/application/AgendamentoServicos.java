@@ -1,5 +1,7 @@
 package application;
 
+import java.util.Random;
+
 import resources.Banho;
 import resources.BanhoHidratacao;
 import resources.BanhoTosa;
@@ -13,6 +15,8 @@ import resources.HistoricoDaycare;
 import resources.LerDados;
 
 public class AgendamentoServicos {
+	public static Random rd = new Random();
+	
 	public static void agendamentoServicos() {
 		System.out.println();
 		System.out.println("Qual serviço você esta buscando?");
@@ -51,7 +55,6 @@ public class AgendamentoServicos {
 		Integer escolha = LerDados.lerInt("Opção inválida! Tente novamente.\n");
 
 		if (escolha.equals(1)) {
-			var doutor = "Hugo";
 			System.out.println();
 			System.out.println("Você escolheu consulta de rotina.");
 			System.out.print("Diga o dia, mês e horario que deseja para a consulta de rotina (dd/mm/aaaa HH:mm): ");
@@ -60,12 +63,23 @@ public class AgendamentoServicos {
 			var nome = LerDados.lerTexto();
 			System.out.print("Nome do dono do pet: ");
 			var dono = LerDados.lerTexto();
-			HistoricoConsulta.adicionarConsultaRotina(new ConsultaRotina(dia, nome, dono, doutor));
+			
+			int registro = 1 + rd.nextInt(1000);
+			for (int i = 0; i < HistoricoConsulta.consultaRotina.size(); i++) {
+				if (HistoricoConsulta.consultaRotina.get(i).getRegistro() == registro) {
+					registro = 1 + rd.nextInt(1000);
+				}
+				else {
+					break;
+				}
+			}
+			
+			HistoricoConsulta.adicionarConsultaRotina(new ConsultaRotina(dia, nome, dono, registro));
 
 			System.out.println();
 			System.out.println("Perfeito! Consulta de rotina marcada. Nos vemos em breve.");
+			
 		} else if (escolha.equals(2)) {
-			var doutor = "Otávio";
 			System.out.println();
 			System.out.println("Você escolheu consulta de emergência.");
 			System.out.print("Diga o dia, mês e horario que deseja para a consulta de emergência (dd/mm/aaaa HH:mm): ");
@@ -74,10 +88,22 @@ public class AgendamentoServicos {
 			var nome = LerDados.lerTexto();
 			System.out.print("Nome do dono do pet: ");
 			var dono = LerDados.lerTexto();
-			HistoricoConsulta.adicionarConsultaEmergencia(new ConsultaEmergencia(dia, nome, dono, doutor));
+			
+			int registro = 1 + rd.nextInt(1000);
+			for (int i = 0; i < HistoricoConsulta.consultaEmergencia.size(); i++) {
+				if (HistoricoConsulta.consultaEmergencia.get(i).getRegistro() == registro) {
+					registro = 1 + rd.nextInt(1000);
+				}
+				else {
+					break;
+				}
+			}
+			
+			HistoricoConsulta.adicionarConsultaEmergencia(new ConsultaEmergencia(dia, nome, dono, registro));
 			
 			System.out.println();
 			System.out.println("Perfeito! Consulta de emergencia marcada. Nos vemos em breve.");
+			
 		} else if (escolha.equals(0)) {
 			return;
 		} else {
@@ -106,10 +132,22 @@ public class AgendamentoServicos {
 				var animal = LerDados.lerTexto();
 				System.out.print("Nome do dono do pet: ");
 				var dono = LerDados.lerTexto();
-				HistoricoBanhoTosa.adicionarBanho(new Banho(dia, animal, dono));
+				
+				int registro = 1 + rd.nextInt(1000);
+				for (int i = 0; i <  HistoricoBanhoTosa.banho.size(); i++) {
+					if (HistoricoBanhoTosa.banho.get(i).getRegistro() == registro) {
+						registro = 1 + rd.nextInt(1000);
+					}
+					else {
+						break;
+					}
+				}
+				
+				HistoricoBanhoTosa.adicionarBanho(new Banho(dia, animal, dono, registro));
 
 				System.out.println();
 				System.out.println("Perfeito! Banho marcado.");
+				
 			} else if (escolha.equals(2)) {
 				System.out.println();
 				System.out.print("Me informe o dia e o horario para o banho e tosa (dd/mm/aaaa HH:mm): ");
@@ -118,10 +156,22 @@ public class AgendamentoServicos {
 				var animal = LerDados.lerTexto();
 				System.out.print("Nome do dono do pet: ");
 				var dono = LerDados.lerTexto();
-				HistoricoBanhoTosa.adicionarBanhoTosa(new BanhoTosa(dia, animal, dono));
+				
+				int registro = 1 + rd.nextInt(1000);
+				for (int i = 0; i <  HistoricoBanhoTosa.banhoTosa.size(); i++) {
+					if (HistoricoBanhoTosa.banhoTosa.get(i).getRegistro() == registro) {
+						registro = 1 + rd.nextInt(1000);
+					}
+					else {
+						break;
+					}
+				}
+				
+				HistoricoBanhoTosa.adicionarBanhoTosa(new BanhoTosa(dia, animal, dono, registro));
 
 				System.out.println();
 				System.out.println("Perfeito! Tosa marcada.");
+				
 			} else if (escolha.equals(3)) {
 				System.out.println();
 				System.out.print("Me informe o dia e o horario para o banho e a hidratação (dd/mm/aaaa HH:mm): ");
@@ -130,10 +180,22 @@ public class AgendamentoServicos {
 				var animal = LerDados.lerTexto();
 				System.out.print("Nome do dono do pet: ");
 				var dono = LerDados.lerTexto();
-				HistoricoBanhoTosa.adicionarBanhoHidratacao(new BanhoHidratacao(dia, animal, dono));
+				
+				int registro = 1 + rd.nextInt(1000);
+				for (int i = 0; i <  HistoricoBanhoTosa.banhoHidratacao.size(); i++) {
+					if (HistoricoBanhoTosa.banhoHidratacao.get(i).getRegistro() == registro) {
+						registro = 1 + rd.nextInt(1000);
+					}
+					else {
+						break;
+					}
+				}
+				
+				HistoricoBanhoTosa.adicionarBanhoHidratacao(new BanhoHidratacao(dia, animal, dono, registro));
 				
 				System.out.println();
 				System.out.println("Perfeito! Banho e tosa marcado.");
+				
 			} else if (escolha.equals(4)) {
 				System.out.println();
 				System.out.print("Me informe o dia e o horario para o banho e tosa higiênica (dd/mm/aaaa HH:mm): ");
@@ -142,10 +204,22 @@ public class AgendamentoServicos {
 				var animal = LerDados.lerTexto();
 				System.out.print("Nome do dono do pet: ");
 				var dono = LerDados.lerTexto();
-				HistoricoBanhoTosa.adicionarBanhoTosaHigienica(new BanhoTosaHigienica(dia, animal, dono));
+				
+				int registro = 1 + rd.nextInt(1000);
+				for (int i = 0; i <  HistoricoBanhoTosa.banhoTosaHigienica.size(); i++) {
+					if (HistoricoBanhoTosa.banhoTosaHigienica.get(i).getRegistro() == registro) {
+						registro = 1 + rd.nextInt(1000);
+					}
+					else {
+						break;
+					}
+				}
+				
+				HistoricoBanhoTosa.adicionarBanhoTosaHigienica(new BanhoTosaHigienica(dia, animal, dono, registro));
 				
 				System.out.println();
 				System.out.println("Perfeito! Banho e tosa higiênica marcada.");
+				
 			} else if (escolha.equals(0)) {
 				return;
 			} else {
@@ -171,7 +245,18 @@ public class AgendamentoServicos {
 	    System.out.println("|Happy Pet House.|");
 	    System.out.print("Digite aqui: ");
 	    String localidade = LerDados.lerTexto();
-	    HistoricoDaycare.adicionarDaycare(new Daycare(localidade, dataDaycare, animal, dono));
+	    
+	    int registro = 1 + rd.nextInt(1000);
+		for (int i = 0; i <  HistoricoDaycare.daycare.size(); i++) {
+			if (HistoricoDaycare.daycare.get(i).getRegistro() == registro) {
+				registro = 1 + rd.nextInt(1000);
+			}
+			else {
+				break;
+			}
+		}
+	    
+	    HistoricoDaycare.adicionarDaycare(new Daycare(localidade, dataDaycare, animal, dono, registro));
 		
 		System.out.println();
 		System.out.println("Perfeito! Nos vemos em breve!");

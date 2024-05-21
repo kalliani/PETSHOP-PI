@@ -7,12 +7,15 @@ public class Proprietario {
 	private BigDecimal cpf;
 	private BigDecimal telefone;
 	private String email;
-	
-	public Proprietario(String nomeProprietario, BigDecimal cpf, BigDecimal telefone, String email) {
+	private int registro;
+
+	public Proprietario(String nomeProprietario, BigDecimal cpf, BigDecimal telefone, String email, int registro) {
+		super();
 		this.nomeProprietario = nomeProprietario;
 		this.cpf = cpf;
 		this.telefone = telefone;
 		this.email = email;
+		this.registro = registro;
 	}
 
 	public String getNomeProprietario() {
@@ -31,6 +34,10 @@ public class Proprietario {
 		return email;
 	}
 	
+	public int getRegistro() {
+		return registro;
+	}
+
 	public String toString() {
 		return "Nome do proprietario: "
 				+ nomeProprietario
@@ -39,6 +46,8 @@ public class Proprietario {
 				+ "\nNumero de telefone: "
 				+ String.format("%.0f", telefone)
 				+ "\nEmail: "
-				+ email;
+				+ email
+				+ "\nNumero de registro: "
+				+ registro;
 	}
 }

@@ -27,6 +27,14 @@ public class CadastroPet {
 		var anotacoesPet = LerDados.lerTexto();
 		
 		int numeroRegistro = 1 + rd.nextInt(1000);
+		for (int i = 0; i < HistoricoPet.pet.size(); i++) {
+			if (HistoricoPet.pet.get(i).getNumeroRegistro() == numeroRegistro) {
+				numeroRegistro = 1 + rd.nextInt(1000);
+			}
+			else {
+				break;
+			}
+		}
 
 		System.out.println();
 		System.out.println("Perfeito! Seu pet foi registrado com sucesso.");

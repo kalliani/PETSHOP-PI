@@ -6,35 +6,29 @@ public class BanhoTosaHigienica {
 	private LocalDateTime dataBanhoTosaHigienica;
 	private String animal;
 	private String donoDoAnimal;
+	private int registro;
 
-	public BanhoTosaHigienica(LocalDateTime dataBanhoTosaHigienica, String animal, String donoDoAnimal) {
+	public BanhoTosaHigienica(LocalDateTime dataBanhoTosaHigienica, String animal, String donoDoAnimal, int registro) {
 		this.dataBanhoTosaHigienica = dataBanhoTosaHigienica;
 		this.animal = animal;
 		this.donoDoAnimal = donoDoAnimal;
+		this.registro = registro;
 	}
 
 	public LocalDateTime getDataBanhoTosaHigienica() {
 		return dataBanhoTosaHigienica;
-	}
-
-	public void setDataBanhoTosaHigienica(LocalDateTime dataBanhoTosaHigienica) {
-		this.dataBanhoTosaHigienica = dataBanhoTosaHigienica;
 	}
 	
 	public String getAnimal() {
 		return animal;
 	}
 
-	public void setAnimal(String animal) {
-		this.animal = animal;
-	}
-
 	public String getDonoDoAnimal() {
 		return donoDoAnimal;
 	}
-
-	public void setDonoDoAnimal(String donoDoAnimal) {
-		this.donoDoAnimal = donoDoAnimal;
+	
+	public int getRegistro() {
+		return registro;
 	}
 
 	public String toString() {
@@ -43,6 +37,8 @@ public class BanhoTosaHigienica {
 				+ "\nProprietario do pet: "
 				+ donoDoAnimal
 				+ "\nDia do banho: "
-				+ dataBanhoTosaHigienica;
+				+ dataBanhoTosaHigienica
+				+ "\nNumero de registro: "
+				+ registro;
 	}
 }

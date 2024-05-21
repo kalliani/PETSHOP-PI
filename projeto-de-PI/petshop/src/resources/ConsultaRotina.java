@@ -6,55 +6,39 @@ public class ConsultaRotina {
     private LocalDateTime dataRotina;
     private String animal;
     private String donoDoAnimal;
-    private String doutor;
+    private int registro;
 
-	public ConsultaRotina(LocalDateTime dataRotina, String animal, String donoDoAnimal, String doutor) {
+	public ConsultaRotina(LocalDateTime dataRotina, String animal, String donoDoAnimal, int registro) {
 		this.dataRotina = dataRotina;
 		this.animal = animal;
 		this.donoDoAnimal = donoDoAnimal;
-		this.doutor = doutor;
+		this.registro = registro;
 	}
 
 	public LocalDateTime getDataRotina() {
         return dataRotina;
-    }
-
-    public void setDataRotina(LocalDateTime dataRotina) {
-        this.dataRotina = dataRotina;
     }
     
     public String getAnimal() {
 		return animal;
 	}
 
-	public void setAnimal(String animal) {
-		this.animal = animal;
-	}
-
 	public String getDonoDoAnimal() {
 		return donoDoAnimal;
 	}
 
-	public void setDonoDoAnimal(String donoDoAnimal) {
-		this.donoDoAnimal = donoDoAnimal;
-	}
-
-	public String getDoutor() {
-		return doutor;
-	}
-
-	public void setDoutor(String doutor) {
-		this.doutor = doutor;
+	public int getRegistro() {
+		return registro;
 	}
 
 	public String toString() {
-        return "Doutor da consulta: "
-        		+ doutor
-        		+ "\nPet: "
+        return "\nPet: "
         		+ animal
         		+ "\nDono do animal: "
         		+ donoDoAnimal
         		+ "\nDia da consulta: "
-        		+ dataRotina;
+        		+ dataRotina
+        		+ "\nNumero de registro: "
+        		+ registro;
     }
 }
