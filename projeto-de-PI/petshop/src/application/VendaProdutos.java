@@ -29,14 +29,18 @@ public class VendaProdutos {
                 System.out.print("Quantas unidades? ");
                 var quantidade = LerDados.lerInt("Essa não é uma opção válida, tente novamente!");
                 Produtos produto = ListaProdutos.produtos.get(escolha - 1);
-                int subtracao = produto.getQuantidade() - quantidade;
-                produto.setQuantidade(subtracao);
-                carrinho += produto.getPreco() * quantidade;
-                System.out.print("Planeja comprar algo mais? (s/n) ");
-                continuarComprando = LerDados.lerSimNao("Essa não é uma opção válida, tente novamente!\n");
-                if (!continuarComprando) {
-                    carrinhoCompras();
-                    return;
+                if (quantidade <=  produto.getQuantidade()) {
+	                int subtracao = produto.getQuantidade() - quantidade;
+	                produto.setQuantidade(subtracao);
+	                carrinho += produto.getPreco() * quantidade;
+	                System.out.print("Planeja comprar algo mais? (s/n) ");
+	                continuarComprando = LerDados.lerSimNao("Essa não é uma opção válida, tente novamente!\n");
+	                if (!continuarComprando) {
+	                    carrinhoCompras();
+	                    return;
+	                }
+                } else {
+                	System.out.println("Não temos tantos itens assim no estoque.");
                 }
             } else if (escolha.equals(0)) {
                 return;

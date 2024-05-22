@@ -26,6 +26,9 @@ public class EstoqueDeProdutos {
 			System.out.println();
 			System.out.println("Produto adicionado!");
 		} else if (escolha.equals(2)) {
+			for (Produtos produto: ListaProdutos.produtos) {
+				System.out.println(produto.getNome());
+			}
 			System.out.print("Digite o nome do produto que deseja mudar o estoque: ");
 			var nome = LerDados.lerTexto();
 			 boolean produtoEncontrado = false;

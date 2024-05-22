@@ -31,6 +31,7 @@ public class CancelarAgendamentoServicos {
 	}
 
 	public static void cancelarConsulta() {
+		System.out.println();
 		System.out.println("Qual tipo de consulta?");
 		System.out.println("|1. Consulta de rotina.    |");
 		System.out.println("|2. Consulta de emergência.|");
@@ -83,6 +84,7 @@ public class CancelarAgendamentoServicos {
 	}
 
 	public static void cancelarBanhos() {
+		System.out.println();
 		System.out.println("Qual dos banhos?");
 		System.out.println("|1. Banho.                 |");
 		System.out.println("|2. Banho e Tosa.          |");
