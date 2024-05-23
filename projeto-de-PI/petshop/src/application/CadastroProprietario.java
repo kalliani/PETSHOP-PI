@@ -10,7 +10,6 @@ public class CadastroProprietario {
 	public static Random rd = new Random();
 	
 	public static void cadastroProprietario() {
-		System.out.println();
 		System.out.print("Digite o seu nome completo: ");
 		var nomeProprietario = LerDados.lerTexto();
 		System.out.print("Digite seu cpf: ");

@@ -12,7 +12,6 @@ public class CadastroPet {
 	public static Random rd = new Random();
 	
 	public static void cadastroPet() {
-		System.out.println();
 		System.out.print("Digite o nome do seu pet: ");
 		var nomePet = LerDados.lerTexto();
 		System.out.print("Digite a idade do seu pet: ");

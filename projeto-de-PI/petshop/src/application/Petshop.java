@@ -6,6 +6,7 @@ import resources.ListaProdutos;
 public class Petshop {
 	public static void main(String[] args) {
 		ListaProdutos.produtosIniciais();
+		CadastroEventos.eventosIniciais();
 		while (true) {
 			System.out.println("Bem-vindo ao nosso petshop! Identifique-se antes de acessar.");
 			System.out.println("|1. Sou cliente.    |");
