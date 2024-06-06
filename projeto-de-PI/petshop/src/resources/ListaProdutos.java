@@ -16,7 +16,7 @@ public class ListaProdutos {
 		ListaProdutos.adicionarProdutos(new Produtos("Brinquedo para Gatos", 20, 15.0));
 		ListaProdutos.adicionarProdutos(new Produtos("Brinquedo para Cães", 20, 20.0));
 		ListaProdutos.adicionarProdutos(new Produtos("Shampoo para Cães", 20, 18.0));
-		ListaProdutos.adicionarProdutos(new Produtos("Shampoo para Cães", 20, 18.0));
+		ListaProdutos.adicionarProdutos(new Produtos("Shampoo para Gatos", 20, 18.0));
 		ListaProdutos.adicionarProdutos(new Produtos("Casinha para Cães", 20, 100.0));
 	}
 }
