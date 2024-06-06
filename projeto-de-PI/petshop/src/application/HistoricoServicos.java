@@ -1,7 +1,6 @@
 package application;
 
 import java.util.List;
-import java.util.Map;
 
 import resources.Banho;
 import resources.BanhoHidratacao;
@@ -207,13 +206,13 @@ public class HistoricoServicos {
 		}
 	}
 
-	public static void imprimirListaPets(Map<Integer, PetsAdotados> petsAdotados) {
+	public static void imprimirListaPets(List<PetsAdotados> petsAdotados) {
 		System.out.println();
 		if (petsAdotados != null && !petsAdotados.isEmpty()) {
 			System.out.println("Pets adotados:");
-			for (Integer key : petsAdotados.keySet()) {
+			for (PetsAdotados histoPetsAdotados : petsAdotados) {
 				System.out.println();
-				System.out.println(petsAdotados.get(key));
+				System.out.println(histoPetsAdotados);
 			}
 		} else {
 			System.out.println();

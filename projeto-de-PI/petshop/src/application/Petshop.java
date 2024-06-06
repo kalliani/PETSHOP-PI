@@ -1,5 +1,6 @@
 package application;
 
+import resources.HistoricoAdocaoPets;
 import resources.LerDados;
 import resources.ListaProdutos;
 
@@ -7,6 +8,7 @@ public class Petshop {
 	public static void main(String[] args) {
 		ListaProdutos.produtosIniciais();
 		CadastroEventos.eventosIniciais();
+		HistoricoAdocaoPets.adicionarPetsIniciais();
 		while (true) {
 			System.out.println("Bem-vindo ao nosso petshop! Identifique-se antes de acessar.");
 			System.out.println("|1. Sou cliente.    |");

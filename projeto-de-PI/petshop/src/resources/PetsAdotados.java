@@ -7,23 +7,26 @@ public class PetsAdotados {
 	private String idade;
 	private String raca;
 	private String pessoaQueAdotou;
+	private String endereco;
 	
-	public PetsAdotados(String nome, String animal, String genero, String idade, String raca, String pessoaQueAdotou) {
+	public PetsAdotados(String nome, String animal, String genero, String idade, String raca, String pessoaQueAdotou, String endereco) {
 		this.nome = nome;
 		this.animal = animal;
 		this.genero = genero;
 		this.idade = idade;
 		this.pessoaQueAdotou = pessoaQueAdotou;
 		this.raca = raca;
+		this.endereco = endereco;
 	}
 
-	public PetsAdotados(String nome, String animal, String genero, String idade, String pessoaQueAdotou) {
+	public PetsAdotados(String nome, String animal, String genero, String idade, String pessoaQueAdotou, String endereco) {
 		super();
 		this.nome = nome;
 		this.animal = animal;
 		this.genero = genero;
 		this.idade = idade;
 		this.pessoaQueAdotou = pessoaQueAdotou;
+		this.endereco = endereco;
 	}
 
 	public String getNome() {
@@ -46,38 +49,28 @@ public class PetsAdotados {
 		return genero;
 	}
 
-	public void setGenero(String genero) {
-		this.genero = genero;
-	}
-
 	public String getIdade() {
 		return idade;
 	}
 
-	public void setIdade(String idade) {
-		this.idade = idade;
-	}
-	
 	public String getRaca() {
 		return raca;
-	}
-
-	public void setRaca(String raca) {
-		this.raca = raca;
 	}
 
 	public String getPessoaQueAdotou() {
 		return pessoaQueAdotou;
 	}
-
-	public void setPessoaQueAdotou(String pessoaQueAdotou) {
-		this.pessoaQueAdotou = pessoaQueAdotou;
+	
+	public String getEndereco() {
+		return endereco;
 	}
 
 	public String toString() {
 		if (raca == null) {
 		return  "Quem adotou: "
 				+ pessoaQueAdotou
+				+ "\nEndereço de quem adotou: "
+				+ endereco
 				+ "\nAnimal adotado: "
 				+ nome
 				+ " - "
@@ -90,6 +83,8 @@ public class PetsAdotados {
 		} else {
 			return  "Quem adotou: "
 					+ pessoaQueAdotou
+					+ "\nEndereço de quem adotou: "
+					+ endereco
 					+ "\nAnimal adotado: "
 					+ nome
 					+ " - "
