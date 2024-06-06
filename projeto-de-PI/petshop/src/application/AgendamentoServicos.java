@@ -240,9 +240,9 @@ public class AgendamentoServicos {
 		System.out.print("Digite a data de hospedagem do seu pet (dd/mm/aaaa HH:mm): ");
 		var dataDaycare = LerDados.lerDataHora("Parece que você digitou errado, tente novamente!\n");
 		System.out.println("Escolha a localidade para a hospedagem do seu pet:");
-	    System.out.println("|Centro Pet.     |");
-	    System.out.println("|Pet Paradise.   |");
-	    System.out.println("|Happy Pet House.|");
+	    System.out.println("|1.Centro Pet.     |");
+	    System.out.println("|2.Pet Paradise.   |");
+	    System.out.println("|3.Happy Pet House.|");
 	    System.out.print("Digite aqui: ");
 	    String localidade = LerDados.lerTexto();
 	    
