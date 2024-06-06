@@ -22,7 +22,7 @@ public class CadastroPet {
 		var pesoPet = LerDados.lerDouble("Por favor, digite somente o peso de seu pet. ");
 		System.out.print("Nome do responsavel do animal: ");
 		var proprietario = LerDados.lerTexto();
-		System.out.println("Adicione neste campo informações extras sobre restrições/alergias do seu pet.");
+		System.out.println("Adicione neste campo a raça do pet e informações extras sobre restrições/alergias");
 		var anotacoesPet = LerDados.lerTexto();
 		
 		int numeroRegistro = 1 + rd.nextInt(1000);
