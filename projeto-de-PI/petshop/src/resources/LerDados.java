@@ -242,16 +242,23 @@ public class LerDados {
 	}
 
 	public static LocalDateTime lerDataHora(String tenteNovamente) {
-		while (true) {
-			var linha = scan.nextLine();
-			try {
-				return LocalDateTime.parse(linha, DATA_HORA);
-			} catch (DateTimeParseException erro) {
-				// Ignora o erro, segue com o System.out.println mais abaixo e com o while true
-				// em seguida.
-			}
-			System.out.print(tenteNovamente);
-		}
+	    while (true) {
+	        var linha = scan.nextLine();
+	        try {
+	            LocalDateTime dataHora = LocalDateTime.parse(linha, DATA_HORA);
+	            // Verifica se a data é anterior à data atual
+	            if (dataHora.isBefore(LocalDateTime.now())) {
+	                throw new DateTimeException("A data não pode ser anterior à data atual.");
+	            }
+	            return dataHora;
+	        } catch (DateTimeParseException erro) {
+	            // Ignora o erro, segue com o System.out.println mais abaixo e com o while true
+	            // em seguida.
+	        } catch (DateTimeException erro) {
+	            System.out.println(erro.getMessage()); // Exibe mensagem de erro específica
+	        }
+	        System.out.print(tenteNovamente);
+	    }
 	}
 
 	public static Optional<LocalDateTime> lerDataHoraOpcional(String tenteNovamente) {
