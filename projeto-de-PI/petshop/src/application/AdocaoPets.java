@@ -38,7 +38,6 @@ public class AdocaoPets {
 			System.out.print("Digite aqui: ");
 			Integer escolha = LerDados.lerInt("Essa não é uma opção válida, tente novamente!\n");
 			
-			HistoricoAdocaoPets.pet.remove(escolha - 1);
 			if (escolha >= 1 && escolha <= HistoricoAdocaoPets.pet.size()) {
 				Pets petEscolhido = HistoricoAdocaoPets.pet.get(escolha - 1);
 				System.out.print("Digite seu nome: ");
@@ -54,6 +53,7 @@ public class AdocaoPets {
 						System.out.print("Você confirma que esse é o seu cadastro (s/n)? ");
 						Boolean confirmacao = LerDados.lerSimNao("Essa não é uma opção válida, tente novamente!\n");
 						if (confirmacao.equals(true)) {
+							HistoricoAdocaoPets.pet.remove(escolha - 1);
 							System.out.print("Digite seu endereço para que possamos entregar-lo a você: ");
 							var endereco = LerDados.lerTexto();
 							HistoricoAdocaoPets.petsAdotados(new PetsAdotados(petEscolhido.getNome(), petEscolhido.getAnimal(),
