@@ -13,8 +13,8 @@ public class CadastroEventos {
 		String nome = LerDados.lerTexto();
 		System.out.print("Diga o local do evento: ");
 		String local = LerDados.lerTexto();
-		System.out.print("Diga a data do evento: ");
-		LocalDateTime data = LerDados.lerDataHora("Horario invalido, tente novamente!\n");
+		System.out.print("Diga a data do evento (dd/MM/aaaa HH:ss): ");
+		LocalDateTime data = LerDados.lerDataHora("Data invalida, tente novamente!\n");
 		
 		CadastroEventos.adicionarEventos(new Eventos(data, nome, local));
 		
