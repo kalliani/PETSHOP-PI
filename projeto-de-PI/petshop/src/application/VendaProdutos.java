@@ -29,7 +29,7 @@ public class VendaProdutos {
                 System.out.print("Quantas unidades? ");
                 var quantidade = LerDados.lerInt("Essa não é uma opção válida, tente novamente!");
                 Produtos produto = ListaProdutos.produtos.get(escolha - 1);
-                if (quantidade <=  produto.getQuantidade()) {
+                if (quantidade <=  produto.getQuantidade() && !quantidade < 0) {
 	                int subtracao = produto.getQuantidade() - quantidade;
 	                produto.setQuantidade(subtracao);
 	                carrinho += produto.getPreco() * quantidade;
